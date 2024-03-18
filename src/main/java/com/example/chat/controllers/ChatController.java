@@ -1,2 +1,8 @@
-package com.example.chat.controllers;public class ChatController {
+package com.example.chat.controllers;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class ChatController {
+
 }
