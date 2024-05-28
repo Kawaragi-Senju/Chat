@@ -22,6 +22,5 @@ public class Security {
                         .loginProcessingUrl("Процесс Логирования ")
                         .permitAll());
         return httpSecurity.build();
-
     }
 }

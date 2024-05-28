@@ -1,12 +1,21 @@
 package com.example.chat.models;
 
-import java.util.Properties;
+import jakarta.persistence.*;
 
+import java.util.Properties;
+@Entity
+@Table(name = "admins")
 public class Admin {
+    @Column(name = "name")
     private String name;
+    @Column(name = "role")
     private String role;
+    @Column(name = "role")
     private String email;
     private String password;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     public Admin(String name, String role, String email, String password) {
         this.name = name;
@@ -50,4 +59,11 @@ public class Admin {
     public Admin(){
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }
